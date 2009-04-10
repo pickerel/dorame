@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+<head>
+	<title>Dorame</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link href="styles/theme.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="javascripts/AIRAliases.js" charset="utf-8"></script>
+	<script type="text/javascript" src="javascripts/jquery-1.2.6.pack.js" charset="utf-8"></script>
+	<script type="text/javascript" src="javascripts/jquery.mytips.js" charset="utf-8"></script>
+	<script type="text/javascript" src="javascripts/jquery.myslide.js" charset="utf-8"></script>
+	<script type="text/javascript" src="javascripts/saaa.util.js" charset="utf-8"></script>
+	<script type="text/javascript" src="javascripts/saaa.win.js" charset="utf-8"></script>	
+	<script type="text/javascript" src="javascripts/saaa.updater.js" charset="utf-8"></script>
+	<script type="text/javascript" src="javascripts/sandbox.bridge.parent.js" charset="utf-8"></script>	
+	<script type="text/javascript" src="javascripts/saaa.dorame.js" charset="utf-8"></script>	
+	
+	<script>
+		$(document).ready(function() {
+			saaa.init_main_win();
+			saaa.update();
+		});
+
+	</script>
+	<style>
+	#mysandbox iframe{position:absolute; top:0px;margin:0px;padding:0px;width:730px;height:360px;border:0px;}
+	.content{width:100%;height:100%;display:none;position:absolute; }
+	#about, #update {margin:10px;}
+	</style>
+</head>
+
+<body> 
+	<div id="layout" class="default-theme">				
+		<div id="header" class="element movable">		 
+			<div class="logo"></div>
+			<ul class="toolbar">
+				<li class="change-theme-btn" theme="default"><a href="#" style="color:#0d2d60" title="default theme" ><span class="block default"></span></a></li>
+				<li class="change-theme-btn" theme="dark"><a href="#" style="color:#56535d" title="dark theme" ><span class="block dark"> </span></a></li>				
+				<li class="change-theme-btn" theme="red"><a href="#" style="color:#e10b09" title="red theme" ><span class="red block"> </span></a></li>
+				<li class="change-theme-btn" theme="pink"><a href="#" style="color:#ffcbea" title="pink theme" ><span class="pink block"> </span></a></li>				
+				<li class="change-theme-btn" theme="grey"><a href="#" style="color:#ccc" title="grey theme" ><span class="grey block"> </span></a></li>
+				<li id="disable-always-top-btn"><a href="#" rel="disable-always-top" title="cancel always on top">Ø</a></li>
+				<li id="always-top-btn"><a href="#" rel="always-top" title="always on top">Ô</a></li>
+				<li id="tray-btn"><a href="#" rel="tray" title="minimize">⊥</a></li>
+				<li id="min-btn"><a href="#" rel="min" title="minimize">-</a></li>
+				<li id="max-btn"><a href="#" ref="max" title="maximize">O</a></li>
+				<li id="restore-btn"><a href="#" ref="restore" title="restore">¤</a></li>
+				<li id="close-btn"><a href="#" rel="close" title="close">x</a></li>
+			</ul>
+			<div id="btn-tooltip"></div>
+			<div id="status-icon"><img src="images/progress.gif" style="opacity:0.7;"/></div>
+			<ul id="menu">
+				<li id="menu-item-about"><a  href="#">About</a></li>
+				<li id="menu-item-back-player"><a  href="#">Pandora Player</a></li>				
+				<li id="menu-item-ui-mode-normal"><a  href="#" class="selected">UI Mode: Normal</a></li>
+				<li id="menu-item-ui-mode-clean"><a  href="#" class="selected">UI Mode: Clean</a></li>								
+			</ul>
+			
+		</div>
+		<div id="content" class="element"  style="overflow:hidden;">
+			<div id="mysandbox" class="sandbox content">	</div>
+			<div id="update" class="update content"></div>
+			<div id="about" class="about content">
+				<h2 class="title"></h2>
+				<p class="text">
+					Copyright &copy; 2008 Pickerel Yee.<br/>
+					All rights reserved.<br/><br/>
+					<a href="http://dorame.zduo.net/" target="_blank">http://dorame.zduo.net/</a><br/><br/>
+
+					Email: pickerel@gmail.com<br/>
+
+				</p>
+			</div>
+
+		</div>
+		<div id="footer"  class="element movable" ></div>	
+	</div>
+	
+	
+</body>
+</html>

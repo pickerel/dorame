@@ -1,0 +1,117 @@
+/**
+
+The MIT License
+
+Copyright (c) 2008 Pickere Yee(pickerel@gmail.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+**/
+body{ margin:0; padding:0;width:100%; height:100%;}
+
+/** public style settings, all the items could be override in the special theme style settings. **/
+#layout {font-size:12px; font-family: "Lucida Grande", "Verdana", "新宋体", Sans-Serif; padding:0px;right:0px;left:0px;position:absolute;bottom:0px;top:0px;display:none;}
+#layout .element{right:0px;left:0px;position:absolute;}		
+#layout #header  {height:30px;top:0px;}
+#layout #footer {height:0px;bottom:0px;}
+#layout #content {-webkit-border-radius: 2px;padding: 4px;top:30px;bottom:0px;overflow:auto;margin:4px;line-height:18px;font-size:13.8px;}
+#layout #content .sandbox{left:0px;right:0px;top:0px;bottom:0px;position:absolute;}
+/*#layout #content .sandbox iframe{heigth:100%;width:100%;}*/
+#layout #header .logo {font-size:18px;font-weight:bold;}
+#layout #header .toolbar{position:absolute; right:0px;top:0px; margin:4px 0 0 0;padding:0px;z-index:999;}
+#layout #header .toolbar li{float:left;list-style-type:none;margin-right:4px;display:none;}
+#layout #header .toolbar li a { font-size:12px;-webkit-border-radius: 7px; float:left;text-decoration:none;width:14px;height:14px;text-align:center;padding-bottom:2px;overflow:hidden;}
+#layout #header .toolbar li#close-btn{;}
+#layout #header .toolbar li#min-btn{}
+#layout #header .toolbar li#max-btn{}
+#layout #header .toolbar li#restore-btn{}
+#layout #header .toolbar li#always-top-btn{}
+#layout #header .toolbar li#disable-always-top-btn{}
+#layout #header .toolbar li#tray-btn{}
+#layout #header .toolbar li a .block{height:9px;width:9px;display:block;margin:3px 0 0 2px;}
+#layout #resize-btn {position:absolute;bottom:0px;right:0px;}
+#layout #resize-btn a{cursor:hand; color:darkgreen;text-decoration:none;}
+#layout #btn-tooltip{position:absolute; right:150px; top:3px;z-index:999;}
+#layout #menu{margin:17px 0 0px 4px;padding:0px;}
+#layout #menu li{float:left;list-style-type:none;margin-right:1px;display:none;}
+#layout #menu li a {-webkit-border-radius: 3px; text-decoration:none;text-align:center;padding:1px 6px 1px 6px;overflow:hidden; opacity:0.7;}
+#layout #menu li a {background:#ececec;color:#222;}
+#layout #menu li a:hover {opacity:0.9;}
+#status-icon{margin:5px;}
+
+#layout[win="notifybox"] {-webkit-border-radius: 4px;padding:6px;opacity:0.9;}
+#layout[win="notifybox"] #content {-moz-border-radius: 0px;-webkit-border-radius: 0px;padding: 0px;top:12px;bottom:0px;overflow:auto;}
+#layout[win="notifybox"] #header  {height:12px;top:0px;overflow:hidden;}
+#layout[win="notifybox"] #header .toolbar{position:absolute; right:0px;top:-4px; margin:1px 0 0 0;padding:0px;}
+#layout[win="notifybox"] #header .toolbar li a { font-size:12px;-webkit-border-radius: 0px; float:left;text-decoration:none;width:12px;height:12px;text-align:center;overflow:hidden;}
+#layout #content a{color:#000;}
+
+/** 默认的蓝色主题 **/
+#layout.default-theme {background:url(../images/default.jpg) repeat #2f5377;border: 1px solid #2f5377;}
+#layout.default-theme #footer {color:#fff;}
+#layout.default-theme #content {background-color: #fff;border: 1px solid #8eacc4;}	
+#layout.default-theme #header .logo {color:#00448d; }
+#layout.default-theme #header .toolbar li a {color: #ccc;}
+#layout.default-theme #header .toolbar li a:hover{background-color: #f0f7fe;}
+#layout.default-theme #btn-tooltip{ color:#f0f7fe; }
+#layout.default-theme #menu li a {background:#34638d;color:#e2ebf4;border:1px solid #9dc0dc;}
+#layout.default-theme #header .toolbar li a {color: #eee;}
+#layout #header .toolbar li a .default{background:#0d2d60;}
+
+/** 红色主题 **/
+#layout.red-theme {background:url(../images/red.jpg) repeat #c33a12;border: 1px solid #c33a12;}
+#layout.red-theme #footer {color:#fff;}
+#layout.red-theme #content {color:#efefef;background-color: #444;border: 2px solid #9f3818;}
+#layout.red-theme #content a{color:#efefef;}
+#layout.red-theme #header .logo {color:#450003; }
+#layout.red-theme #header .toolbar li a {color: #222;}
+#layout.red-theme #header .toolbar li a:hover{background-color: #f0f7fe;}
+#layout.red-theme #btn-tooltip{ color:#444; }
+#layout #header .toolbar li a .red{background:#e10b09;}
+
+/** 黑灰色主题 **/
+#layout.dark-theme {background:url(../images/dark.gif) repeat #56535d;border: 1px solid #56535d;}
+#layout.dark-theme #footer {color:#212326;}
+#layout.dark-theme #content {color:#56535d;background-color: #efefef;border: 1px solid #56535d;}	
+#layout.dark-theme #header .logo {color:#393d40; }
+#layout.dark-theme #header .toolbar li a {color: #ccc;}
+#layout.dark-theme #header .toolbar li a:hover{background-color: #f0f7fe;}
+#layout.dark-theme #btn-tooltip{ color:#ccc; }
+#layout #header .toolbar li a .dark{background:#56535d;}
+
+/** 粉红主题 **/
+#layout.pink-theme {background:url(../images/pink.gif) repeat #fe9bd2;border: 1px solid #fe9bd2;}
+#layout.pink-theme #footer {color:#fff;}
+#layout.pink-theme #content {color:#444;background-color: #fff;border: 2px solid #ffcbea;}	
+#layout.pink-theme #header .logo {color:#450003; }
+#layout.pink-theme #header .toolbar li a {color: #222;}
+#layout.pink-theme #header .toolbar li a:hover{background-color: #f0f7fe;}
+#layout.pink-theme #btn-tooltip{ color:#444; }
+#layout.pink-theme #menu li a {background:#fff;color:#222;border:1px solid #fe9bd2;}
+#layout #header .toolbar li a .pink{background:#ffcbea;}
+
+/** 灰色主题 **/
+#layout.grey-theme {background:url(../images/grey.gif);border: 1px solid #aaa;}
+#layout.grey-theme #footer {color:#212326;}
+#layout.grey-theme #content {color:#222;background-color: #efefef;border: 2px solid #aaa;}	
+#layout.grey-theme #header .logo {color:#58e864; }
+#layout.grey-theme #header .toolbar li a {color: #222;}
+#layout.grey-theme #header .toolbar li a:hover{background-color: #f0f7fe;}
+#layout.grey-theme #btn-tooltip{ color:#444; }
+#layout.grey-theme #menu li a {background:#efefef;color:#222;border:1px solid #666;}
+#layout #header .toolbar li a .grey{background:#ccc;}

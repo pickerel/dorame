@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/1.0">
+    <id>Dorame</id>
+	<version>0.17</version>
+    <filename>Dorame</filename>
+	<installFolder>Dorame</installFolder>
+	<name>Dorame</name>
+    <description>a client for pandora</description>
+    <copyright>Copyright (c) 2008 Pickerel Yee</copyright>
+    <initialWindow>
+     	<content>src/dorame.html</content>
+     	<visible>false</visible>
+	 	<systemChrome>none</systemChrome>
+		<transparent>false</transparent>
+		<minimizable>false</minimizable>
+		<maximizable>false</maximizable>
+		<resizable>false</resizable>		
+		<x>150</x>
+		<y>150</y>
+		<width>640</width>
+		<height>291</height>
+		<minSize>40 60</minSize>
+    </initialWindow>
+	<icon>
+	    <image16x16>src/icons/icon16.png</image16x16>
+	    <image32x32>src/icons/icon32.png</image32x32>
+		<image48x48>src/icons/icon48.png</image48x48>	
+		<image128x128>src/icons/icon128.png</image128x128>
+	</icon>
+</application>

@@ -1,0 +1,1 @@
+if(window.childSandboxBridge==null){window.childSandboxBridge={}}var sandbox_bridge={attach:function(C){var B=0;for(var A in C){window.childSandboxBridge[A]=C[A];B++}if(B==0){window.childSandboxBridge=C}},parent:function(){return window.parentSandboxBridge},debug:function(A){this.parent().trace(A)}};
