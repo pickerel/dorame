@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PandoraBoy Notifications</title>
+	<script src="http://www.pandora.com/include/PandoraAPIv2.js"></script>
+	<script language="javascript">
+window.onload = function()
+{
+Pandora.setEventHandler("SongPlayed", function(args) {
+for(var k in args)
+{
+alert(k + "=" + args[k]);
+}
+	//var data  = ({
+	//	title: "Now Playing", 
+	//	description: args.songName + "\nby " + args.artistName, 
+	//	sticky: false,
+	//	identifier: "Pandora",
+	//	icon: args.artURL
+	//});
+	//alert(data.title + ":" + data.description + ":" + sticky + ":" + identifier + ":" + icon);
+});
+}
+
+</script>
+</head>
+
+<body>
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+		codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"
+		WIDTH="640"
+		HEIGHT="528"
+		id="radio">
+	<PARAM NAME=movie VALUE="https://www.pandora.com:443/radio/tuner_8_7_0_0_pandora.swf">
+	<PARAM NAME=quality VALUE=high>
+	<PARAM NAME=bgcolor VALUE=#FFFFFF>
+ <PARAM NAME=allowscriptaccess VALUE=always>
+	<PARAM NAME=menu VALUE=false>
+ <PARAM NAME="FlashVars" VALUE="_tunervar_skin=pandora&_tunervar_zone=prod&_tunervar_width=640&_tunervar_autocompleteHost=autocomplete.pandora.com&_tunervar_port=80&_tunervar_sport=443&_tunervar_autocompletePort=80&_tunervar_shost=www.pandora.com&_tunervar_height=528&_tunervar_amazonaffiliateid=savagebeast-20&_tunervar_host=www.pandora.com&_tunervar_ar=0&_tunervar_st=1&_tunervar_itunesurl=http%3A%2F%2Fclick.linksynergy.com%2Ffs-bin%2Fstat%3Fid%3DFLenzF8lvbI%26offerid%3D78941%26type%3D3%26subid%3D0%26tmpid%3D1826">
+<EMBED src="https://www.pandora.com:443/radio/tuner_8_7_0_0_pandora.swf"
+ quality=high
+ bgcolor=#FFFFFF
+ allowscriptaccess=always
+ WIDTH="640"
+ HEIGHT="528"
+ MENU="false"
+ NAME="radio" ALIGN="" TYPE="application/x-shockwave-flash"
+ PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"
+ FlashVars="_tunervar_skin=pandora&_tunervar_zone=prod&_tunervar_width=640&_tunervar_autocompleteHost=autocomplete.pandora.com&_tunervar_port=80&_tunervar_sport=443&_tunervar_autocompletePort=80&_tunervar_shost=www.pandora.com&_tunervar_height=528&_tunervar_amazonaffiliateid=savagebeast-20&_tunervar_host=www.pandora.com&_tunervar_ar=0&_tunervar_st=1&_tunervar_itunesurl=http%3A%2F%2Fclick.linksynergy.com%2Ffs-bin%2Fstat%3Fid%3DFLenzF8lvbI%26offerid%3D78941%26type%3D3%26subid%3D0%26tmpid%3D1826">
+</EMBED>
+   
+</OBJECT>
+
+ 
+
+
+</body>
+
+
+</html>

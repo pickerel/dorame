@@ -1,0 +1,1 @@
+var sbwin={parent:null,win:null,init:function(){this.parent=sandbox_bridge.parent();this.win=new sandbox_win($("#layout"),this.parent);sandbox_bridge.attach(child_bridge)},debug:function(A){sandbox_bridge.debug(A)}};var child_bridge={sandbox_init:function(A){sbwin.win.theme=A.parent_win.theme;sbwin.win.init()}};
