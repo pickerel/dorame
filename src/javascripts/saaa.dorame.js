@@ -174,7 +174,7 @@ function init()
 
 		});*/
 		
-		load_sandbox( "https://www.pandora.com:443/radio/tuner_8_8_0_1_pandora_mini.swf");	
+		load_sandbox( "https://www.pandora.com:443/radio/tuner_8_8_0_2_pandora_mini.swf");	
 		//load_sandbox( "http://localhost/src/pandora1.html");	
 }
 function show_sandbox(container, url)
