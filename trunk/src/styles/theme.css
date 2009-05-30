@@ -1,4 +1,4 @@
-/**
+﻿/**
 
 The MIT License
 
@@ -85,7 +85,7 @@ body{ margin:0; padding:0;width:100%; height:100%;}
 #layout #header .toolbar li a .red{background:#e10b09;}
 
 /** 黑灰色主题 **/
-#layout.dark-theme {background:url(../images/dark.gif) repeat #56535d;border: 1px solid #56535d;}
+#layout.dark-theme {backgr../images/dark.gifblack.gif) repeat #56535d;border: 1px solid #56535d;}
 #layout.dark-theme #footer {color:#212326;}
 #layout.dark-theme #content {color:#56535d;background-color: #efefef;border: 1px solid #56535d;}	
 #layout.dark-theme #header .logo {color:#393d40; }
