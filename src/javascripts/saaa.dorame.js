@@ -174,7 +174,7 @@ function init()
 
 		});*/
 		
-		load_sandbox( "https://www.pandora.com:443/radio/tuner_8_8_0_2_pandora_mini.swf");	
+		load_sandbox( "https://www.pandora.com/radio/tuner_9_2_0_0_pandora_mini.swf");	
 		//load_sandbox( "http://localhost/src/pandora1.html");	
 }
 function show_sandbox(container, url)
@@ -197,7 +197,7 @@ function load_sandbox(url)
 	$("#status-icon").fadeIn();
 	if (!sandbox_loaded)
 	{
-		var html = 	'<iframe   sandboxRoot="http://localhost/" documentRoot="app:/"></iframe>';	
+		var html = 	'<iframe  style="margin-top:0px;" sandboxRoot="http://localhost/" documentRoot="app:/"></iframe>';	
 		$("#mysandbox").html(html);
 		
 		$("#mysandbox iframe").attr("src", url);

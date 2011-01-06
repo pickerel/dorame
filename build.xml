@@ -1,6 +1,6 @@
 <project name="dorame" default="test" basedir=".">
     <!-- SDK properties --> 
-    <property name="SDK_HOME" value="D:/dev/env/AdobeAIRSDK"/> 
+    <property name="SDK_HOME" value="E:/dev/env/AdobeAIRSDK"/> 
     <property name="ADL" value="${SDK_HOME}/bin/adl.exe"/>
     <property name="ADT" value="${SDK_HOME}/bin/adt.bat"/> 
     <property name="ADT.JAR" value="${SDK_HOME}/lib/adt.jar"/> 

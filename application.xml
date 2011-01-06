@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <application xmlns="http://ns.adobe.com/air/application/1.0">
     <id>Dorame</id>
-	<version>0.18</version>
+	<version>0.25</version>
     <filename>Dorame</filename>
 	<installFolder>Dorame</installFolder>
 	<name>Dorame</name>
